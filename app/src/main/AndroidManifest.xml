@@ -13,12 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ListViewRefreshSample.RefreshActivity" />
-        <activity android:name=".WeatherViewSample.WeatherActivity">
-        </activity>
+        <activity android:name=".WeatherViewSample.WeatherActivity"></activity>
         <activity android:name=".SmileViewSample.SmileViewActivity" />
         <activity android:name=".SurfaceViewSample.SurfaceViewActivity" />
         <activity android:name=".TSample.TActivity" />
-        <activity android:name=".FlabbyBirdSurfaceViewSample.FlabbyBirdActivity">
+        <activity android:name=".FlabbyBirdSurfaceViewSample.FlabbyBirdActivity"></activity>
+        <activity android:name=".BitmapShaderSample.BitmapShaderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
