@@ -17,7 +17,6 @@
         <attr name="type"/>
     </declare-styleable>
 
-
     <declare-styleable name="bandCardEditText">
         <attr name="editTextType" format="integer">
             <enum name="bankCard" value="0"/>

@@ -23,15 +23,15 @@ public class StarView extends LinearLayout {
 
     /**
      * 位移动画
-     * */
+     */
     TranslateAnimation tvTranslation;
     /**
      * 记录子view的个数
-     * */
+     */
     final int[] count = new int[2];
     /**
      * 记录动画是否执行
-     * */
+     */
     private boolean isDone = false;
     Timer timer;
 
@@ -39,9 +39,9 @@ public class StarView extends LinearLayout {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if(count[0] > 0){
+            if (count[0] > 0) {
                 getChildAt(count[0]).startAnimation(tvTranslation);
-            }else{
+            } else {
                 timer.cancel();
             }
         }
@@ -62,25 +62,26 @@ public class StarView extends LinearLayout {
 
     /**
      * 首先添加16个TextView，然后每四个加一个padding（银行卡显示效果）
-     * */
-    private void init(){
-        for(int i = 0; i < 16; i++){
+     */
+    private void init() {
+        for (int i = 0; i < 16; i++) {
             TextView tv = new TextView(getContext());
             tv.setTextColor(getResources().getColor(R.color.white));
-            if(1 % 4 == 0){
+            if (1 % 4 == 0) {
                 tv.setPadding(10, 0, 0, 0);
-                tv.setText("*");
-                tv.setTextSize(20);
-                addView(tv);
             }
+            tv.setText("*");
+            tv.setTextSize(20);
+            addView(tv);
+
         }
     }
 
     /**
      * 星星坠落动画
-     * */
-    public void startAnim(){
-        if(isDone){
+     */
+    public void startAnim() {
+        if (isDone) {
             return;
         }
 
@@ -100,8 +101,8 @@ public class StarView extends LinearLayout {
         timer.schedule(task, 0, 50);
     }
 
-    public void setText(String s){
-        ((TextView)getChildAt(0)).setText(s);
+    public void setText(CharSequence s) {
+        ((TextView) getChildAt(0)).setText(s);
     }
 
 }
