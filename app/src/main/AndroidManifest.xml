@@ -13,20 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".ListViewRefreshSample.RefreshActivity" />
-        <activity android:name=".WeatherViewSample.WeatherActivity"></activity>
+        <activity android:name=".WeatherViewSample.WeatherActivity" />
         <activity android:name=".SmileViewSample.SmileViewActivity" />
         <activity android:name=".SurfaceViewSample.SurfaceViewActivity" />
         <activity android:name=".TSample.TActivity" />
-        <activity android:name=".FlabbyBirdSurfaceViewSample.FlabbyBirdActivity"></activity>
-        <activity android:name=".BankViewSample.BankViewActivity">
+        <activity android:name=".FlabbyBirdSurfaceViewSample.FlabbyBirdActivity" />
+        <activity android:name=".BankViewSample.BankViewActivity"></activity>
+        <activity android:name=".BitmapShaderSample.BitmapShaderActivity"></activity>
+        <activity android:name=".GiftViewSample.GiftActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".BitmapShaderSample.BitmapShaderActivity">
-
         </activity>
     </application>
 
