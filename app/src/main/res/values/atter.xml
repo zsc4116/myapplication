@@ -6,10 +6,23 @@
         <attr name="background_color" format="color"/>s
     </declare-styleable>
 
+    <attr name="borderRadius" format="dimension"/>
+    <attr name="type">
+        <enum name="circle" value="0"/>
+        <enum name="round" value="1"/>
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius"/>
+        <attr name="type"/>
+    </declare-styleable>
+
+
     <declare-styleable name="bandCardEditText">
         <attr name="editTextType" format="integer">
             <enum name="bankCard" value="0"/>
             <enum name="phoneNum"   value="1"/>
         </attr>
     </declare-styleable>
+
 </resources>
