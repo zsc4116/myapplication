@@ -6,4 +6,10 @@
         <attr name="background_color" format="color"/>s
     </declare-styleable>
 
+    <declare-styleable name="bandCardEditText">
+        <attr name="editTextType" format="integer">
+            <enum name="bankCard" value="0"/>
+            <enum name="phoneNum"   value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>
