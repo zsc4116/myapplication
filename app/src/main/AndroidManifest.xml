@@ -33,7 +33,9 @@
 
         <service
             android:name=".IntentServiceSample.UploadImgService"
-            android:exported="false"></service>
+            android:exported="false" />
+
+        <activity android:name=".HandlerImageloaderSample.HandlerImageloaderActivity"></activity>
     </application>
 
 </manifest>
