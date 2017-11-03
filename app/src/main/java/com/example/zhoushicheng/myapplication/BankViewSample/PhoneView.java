@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.zhoushicheng.myapplication.R;
-import com.example.zhoushicheng.myapplication.Utils.Util;
+import com.example.zhoushicheng.myapplication.Utils.DisplayUtil;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -55,7 +55,7 @@ public class PhoneView extends LinearLayout {
     }
 
     private void init() {
-        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, Util.dp2px(getContext(), 100));
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, DisplayUtil.dp2px(getContext(), 100));
         for (int i = 0; i < texts.length; i++) {
             TextView tv = new TextView(getContext());
             tv.setTextColor(getResources().getColor(R.color.phoneTextBlue));
@@ -63,7 +63,7 @@ public class PhoneView extends LinearLayout {
             tv.setTextSize(16);
             tv.setLayoutParams(params);
             tv.setGravity(Gravity.BOTTOM);
-            tv.setPadding(0, 0, 0, Util.dp2px(getContext(), 30));
+            tv.setPadding(0, 0, 0, DisplayUtil.dp2px(getContext(), 30));
             addView(tv);
         }
     }

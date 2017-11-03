@@ -13,7 +13,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import com.example.zhoushicheng.myapplication.R;
-import com.example.zhoushicheng.myapplication.Utils.Util;
+import com.example.zhoushicheng.myapplication.Utils.DisplayUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,11 +111,11 @@ public class FlabbyBirdSurfaceView extends SurfaceView implements SurfaceHolder.
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
 
-        mPipeWidth = Util.dp2px(getContext(), PIPE_WIDTH);
+        mPipeWidth = DisplayUtil.dp2px(getContext(), PIPE_WIDTH);
 
         initBitmaps();
 
-        mSpeed = Util.dp2px(getContext(), 2);
+        mSpeed = DisplayUtil.dp2px(getContext(), 2);
     }
 
 

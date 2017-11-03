@@ -20,7 +20,7 @@ import android.util.TypedValue;
 import android.widget.ImageView;
 
 import com.example.zhoushicheng.myapplication.R;
-import com.example.zhoushicheng.myapplication.Utils.Util;
+import com.example.zhoushicheng.myapplication.Utils.DisplayUtil;
 
 /**
  * Created by zhoushicheng on 2017/8/27.
@@ -176,7 +176,7 @@ public class RoundImageView extends ImageView {
     }
 
     public void setBorderRadius(int borderRadius) {
-        int pxVal = Util.dp2px(getContext(), borderRadius);
+        int pxVal = DisplayUtil.dp2px(getContext(), borderRadius);
         if (this.mBorderRadius != pxVal) {
             this.mBorderRadius = pxVal;
             invalidate();

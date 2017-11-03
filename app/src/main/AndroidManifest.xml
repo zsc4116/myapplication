@@ -11,7 +11,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ListViewRefreshSample.RefreshActivity" />
         <activity android:name=".WeatherViewSample.WeatherActivity" />
         <activity android:name=".SmileViewSample.SmileViewActivity" />
@@ -20,14 +27,13 @@
         <activity android:name=".FlabbyBirdSurfaceViewSample.FlabbyBirdActivity" />
         <activity android:name=".BankViewSample.BankViewActivity" />
         <activity android:name=".BitmapShaderSample.BitmapShaderActivity" />
-        <activity android:name=".GiftViewSample.GiftActivity"></activity>
-        <activity android:name=".HandlerThreadSample.HandlerThreadActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".GiftViewSample.GiftActivity" />
+        <activity android:name=".HandlerThreadSample.HandlerThreadActivity" />
+        <activity android:name=".IntentServiceSample.IntentServiceActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <service
+            android:name=".IntentServiceSample.UploadImgService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.RectF;
 
-import com.example.zhoushicheng.myapplication.Utils.Util;
+import com.example.zhoushicheng.myapplication.Utils.DisplayUtil;
 
 /**
  * Created by zhoushicheng on 2017/8/27.
@@ -54,7 +54,7 @@ public class Bird {
         y = (int)(gameHeight * RADIO_POS_HEIGHT);
 
         //计算鸟的宽度和高度
-        mWidth = Util.dp2px(context, BIRD_SIZE);
+        mWidth = DisplayUtil.dp2px(context, BIRD_SIZE);
         mHeight = (int)(mWidth * 1.0f / bitmap.getWidth() * bitmap.getHeight());
     }
 

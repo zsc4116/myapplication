@@ -7,10 +7,10 @@ import android.util.TypedValue;
  * Created by zhoushicheng on 2017/8/27.
  */
 
-public class Util {
+public class DisplayUtil {
 
 
-    private Util()
+    private DisplayUtil()
     {
 
         throw new UnsupportedOperationException("cannot be instantiated");
