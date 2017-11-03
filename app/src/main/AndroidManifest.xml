@@ -18,9 +18,10 @@
         <activity android:name=".SurfaceViewSample.SurfaceViewActivity" />
         <activity android:name=".TSample.TActivity" />
         <activity android:name=".FlabbyBirdSurfaceViewSample.FlabbyBirdActivity" />
-        <activity android:name=".BankViewSample.BankViewActivity"></activity>
-        <activity android:name=".BitmapShaderSample.BitmapShaderActivity"></activity>
-        <activity android:name=".GiftViewSample.GiftActivity">
+        <activity android:name=".BankViewSample.BankViewActivity" />
+        <activity android:name=".BitmapShaderSample.BitmapShaderActivity" />
+        <activity android:name=".GiftViewSample.GiftActivity"></activity>
+        <activity android:name=".HandlerThreadSample.HandlerThreadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
