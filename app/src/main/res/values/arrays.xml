@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>f
+    <string-array name="array_left_menu">
+        <item>我的女神</item>
+        <item>棋魂</item>
+        <item>非常家庭</item>
+    </string-array>
+</resources>

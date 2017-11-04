@@ -1,7 +1,10 @@
 package com.example.zhoushicheng.myapplication;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        myPermission();
+
         List<Class> excludeList = new ArrayList<Class>();
         excludeList.add(this.getClass());
         activities = ClassUtil.getActivitiesClass(this, getPackageName(), excludeList);
@@ -32,6 +37,25 @@ public class MainActivity extends AppCompatActivity {
         mActivitiesList = (ListView) findViewById(R.id.lv_activities_list);
         mActivitiesList.setAdapter(new ActivitiesAdapter());
     }
+
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
+    public void myPermission() {
+        int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    this,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+    }
+
 
     class ActivitiesAdapter extends BaseAdapter {
         @Override
@@ -81,4 +105,13 @@ public class MainActivity extends AppCompatActivity {
     class ViewHolder {
         TextView tvItemActivityName;
     }
+
 }
+
+
+
+
+
+
+
+

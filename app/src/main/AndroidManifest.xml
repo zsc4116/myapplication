@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -35,7 +36,9 @@
             android:name=".IntentServiceSample.UploadImgService"
             android:exported="false" />
 
-        <activity android:name=".HandlerImageloaderSample.HandlerImageloaderActivity"></activity>
+        <activity android:name=".HandlerImageloaderSample.HandlerImageloaderActivity" />
+        <activity android:name=".ViewDragHelperSample.ViewDragHelperActivity" />
+        <activity android:name=".ViewDragHelperSample.DrawerLayoutActivity"></activity>
     </application>
 
 </manifest>
