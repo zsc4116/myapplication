@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/content_eventmessage_one_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="show content one" />
+
+    <TextView
+        android:id="@+id/content_eventmessage_two_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_eventmessage_one_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="show content two" />
+
+    <Button
+        android:id="@+id/eventmessage_one_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_eventmessage_two_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="change EventMessageOne" />
+
+    <Button
+        android:id="@+id/eventmessage_two_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventmessage_one_bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="change EventMessageTwo" />
+
+    <TextView
+        android:id="@+id/content_eventmessage_base_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventmessage_two_bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="show content base" />
+
+    <TextView
+        android:id="@+id/content_eventmessage_interface_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_eventmessage_base_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="show content interface" />
+
+</RelativeLayout>

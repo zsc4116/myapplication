@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,15 @@ import android.widget.TextView;
 
 import com.example.zhoushicheng.myapplication.Utils.ClassUtil;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     private ListView mActivitiesList;
@@ -36,12 +44,33 @@ public class MainActivity extends AppCompatActivity {
 
         mActivitiesList = (ListView) findViewById(R.id.lv_activities_list);
         mActivitiesList.setAdapter(new ActivitiesAdapter());
+
+        OkHttpClient httpClient = new OkHttpClient.Builder()
+                .build();
+        Request request = new Request.Builder()
+                .url("http://www.aaa.com")
+                .get()
+                .build();
+        Call call = httpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("zzz", "e = " + e.toString());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                Log.e("zzz", "response = " + response.toString() + ", " + response.body().string());
+            }
+        });
+
     }
 
-    private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
+    private static final int PERMISSIONS_REQUEST = 1;
+    private static String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA
     };
 
     public void myPermission() {
@@ -50,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
                     this,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
+                    PERMISSIONS,
+                    PERMISSIONS_REQUEST
             );
         }
     }
@@ -94,7 +123,9 @@ public class MainActivity extends AppCompatActivity {
             holder.tvItemActivityName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(MainActivity.this, activities.get(position)));
+                    Intent intent = new Intent(MainActivity.this, activities.get(position));
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                 }
             });
 

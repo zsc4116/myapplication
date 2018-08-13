@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhoushicheng.myapplication.DispatchTouchEventSample.DispatchTouchEventSampleActivity">
+
+    <com.example.zhoushicheng.myapplication.DispatchTouchEventSample.MyViewGroupA
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.zhoushicheng.myapplication.DispatchTouchEventSample.MyViewGroupB
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.zhoushicheng.myapplication.DispatchTouchEventSample.MyView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.example.zhoushicheng.myapplication.DispatchTouchEventSample.MyViewGroupB>
+    </com.example.zhoushicheng.myapplication.DispatchTouchEventSample.MyViewGroupA>
+
+</RelativeLayout>

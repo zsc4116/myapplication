@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context="com.example.zhoushicheng.myapplication.TagGroupSample.TagGroupSampleActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="可编辑标签" />
+
+    <!-- 可编辑 -->
+    <me.gujun.android.taggroup.TagGroup
+        android:id="@+id/tag_group"
+        style="@style/TagGroup"
+        app:atg_isAppendMode="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="不可编辑标签" />
+
+    <!-- 不可编辑 -->
+    <me.gujun.android.taggroup.TagGroup
+        android:id="@+id/tag_group_2"
+        style="@style/TagGroup.Beauty_Red.Inverse"
+        app:atg_isAppendMode="false" />
+
+    <me.next.tagview.TagCloudView
+        android:id="@+id/tag_cloud_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tcvBackground="@drawable/bg_tag_selector"
+        app:tcvBorder="8dp"
+        app:tcvCanTagClick="true"
+        app:tcvItemBorderHorizontal="8dp"
+        app:tcvItemBorderVertical="6dp"
+        app:tcvSingleLine="true"
+        app:tcvTextColor="#123455" />
+
+    <com.example.zhoushicheng.myapplication.TagGroupSample.CheckTextGroupView
+        android:id="@+id/checkTextGroupView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:checkModel="SIMPLE"
+        app:checkedStrokeColor="@color/colorPrimary"
+        app:checkedTextColor="#009EF2"
+        app:lineHeight="16dp"
+        app:strokeModel="FILL_FILL"
+        app:strokeWidth="1px"
+        app:tagRadius="5dp"
+        app:textGapWidth="8dp"
+        app:textPaddingButtom="8dp"
+        app:textPaddingLeft="12dp"
+        app:textPaddingRight="12dp"
+        app:textPaddingTop="8dp"
+        app:textSize="14sp"
+        app:unCheckedStrokeColor="@color/colorAccent"
+        app:unCheckedTextColor="#66000000" />
+
+</android.support.v7.widget.LinearLayoutCompat>

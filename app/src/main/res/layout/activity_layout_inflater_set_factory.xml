@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/layoutinflater_sample_textview"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="哈哈哈" />
+
+    <Button
+        android:id="@+id/layoutinflater_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/layoutinflater_sample_textview"
+        android:layout_centerHorizontal="true"
+        android:text="show real class" />
+
+</RelativeLayout>

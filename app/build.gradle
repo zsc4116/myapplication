@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.zhoushicheng.myapplication"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,14 +17,93 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
 }
 
+//task processorTask(type: Exec) {
+//    commandLine 'cp', '../myprocessor/build/libs/myprocessor.jar', 'libs/'
+//}
+//
+//// 构建时，执行 2017/4/19 11:14
+//processorTask.dependsOn(':myprocessor:build')
+//preBuild.dependsOn(processorTask)
+
+
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:25.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.android.support:support-v4:25.4.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //兼容包依赖
+    implementation 'com.android.support:cardview-v7:25.4.0'
+    implementation 'com.android.support:appcompat-v7:25.4.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:25.4.0'
+    implementation 'com.android.support:design:25.4.0'
+    implementation 'com.android.support:recyclerview-v7:25.4.0'
+
+    provided project(':great-annotations')
+    annotationProcessor project(':great-compiler')
+    implementation project(':great-compiler')
+    annotationProcessor project(':myprocessor')
+    implementation project(':myprocessor')
+
+    //Gson依赖
+    implementation 'com.google.code.gson:gson:2.6.2'
+    //EventBus依赖
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //OkHttp依赖
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'//拦截器
+    //ButterKnife依赖
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //Retrofit依赖
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'//retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'//转换器，请求结果转换成Model
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'//配合Rxjava 使用
+    //RxJava依赖
+    implementation 'io.reactivex:rxjava:1.1.0'
+    //RxAndroid依赖
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    //Glide依赖
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //    compile 'com.github.bumptech.glide:glide:4.4.0'
+    //    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+    //INTDEF/STRINGDEF注解库依赖
+    implementation 'com.android.support:support-annotations:22.0.0'
+    //Fragmentation依赖
+    implementation 'me.yokeyword:fragmentation:1.3.3'
+    //AndroidTagGroup依赖
+    implementation 'me.gujun.android.taggroup:library:1.4@aar'
+    //ConvenientBanner依赖
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    //MZBannerView依赖
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'
+    //BaseRecyclerViewAdapterHelper依赖
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //TagCloudView依赖
+    implementation 'com.github.kingideayou:tagcloudview:1.0.2'
+    //密码输入框
+    implementation 'com.jungly:gridPasswordView:0.3'
+    //xrecyclerview依赖
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+    //权限请求库依赖
+    implementation 'me.weyye.hipermission:library:1.0.7'
+    //万能库依赖
+    implementation 'com.blankj:utilcode:1.10.0'
+    //二维码扫描
+    implementation 'me.dm7.barcodescanner:zbar:1.9.3'
+    //Paypal依赖
+    implementation 'com.braintreepayments.api:braintree:2.+'
+
 }

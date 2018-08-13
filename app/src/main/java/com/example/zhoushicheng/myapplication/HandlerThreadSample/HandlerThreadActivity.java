@@ -6,6 +6,7 @@ import android.os.HandlerThread;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.zhoushicheng.myapplication.R;
@@ -61,6 +62,9 @@ public class HandlerThreadActivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
+
+                Log.e("msg", "msg = " + msg.what);
+
                 checkForUpdate();
                 if (isUpdateInfo) {
                     mCheckMsgHandler.sendEmptyMessageDelayed(MSG_UPDATE_INFO, 1000);

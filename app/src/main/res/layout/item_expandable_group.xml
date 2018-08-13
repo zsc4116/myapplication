@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+
+    <TextView
+        android:id="@+id/tv_item_expandable_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="tuogusa"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/img_expandable_group_favor"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="7dp"
+        android:src="@mipmap/pl_blue" />
+
+    <TextView
+        android:id="@+id/tv_expandable_group_comment"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv_item_expandable_group_name"
+        android:layout_margin="10dp"
+        android:textSize="16dp" />
+
+</RelativeLayout>

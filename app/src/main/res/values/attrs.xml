@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="camera_flow_layout">
+        <attr name="max_count" format="integer" />
+        <attr name="item_margin" format="integer" />
+        <attr name="line_count" format="integer" />
+        <attr name="icon_size" format="dimension" />
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="PasswordInputEdt">
+        <attr name="isPwd" format="boolean" />
+        <attr name="autoCloseKeyBoard" format="boolean" />
+        <attr name="isNumber" format="boolean" />
+        <attr name="widthSpace" format="dimension" />
+        <attr name="heightSpace" format="dimension" />
+        <attr name="rectStroke" format="dimension" />
+        <attr name="txtSize" format="dimension" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="bgFill" format="boolean" />
+        <attr name="numLength" format="integer" />
+        <attr name="textColor" format="color" />
+        <attr name="rectNormalColor" format="color" />
+        <attr name="rectChooseColor" format="color" />
+        <attr name="pwdType" format="enum" >
+            <enum name="CIRCLE" value="0"/>
+            <enum name="XINGHAO" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="IndicatorView">
+        <attr name="indicatorRadius" format="dimension"/>
+        <attr name="indicatorBorderWidth" format="dimension"/>
+        <attr name="indicatorSpace" format="dimension"/>
+        <attr name="indicatorTextColor" format="color"/>
+        <attr name="indicatorColor" format="color"/>
+        <attr name="indicatorSelectColor" format="color"/>
+        <attr name="enableIndicatorSwitch" format="boolean"/>
+        <attr name="fill_mode">
+            <enum name="letter" value="0"/>
+            <enum name="number" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="CheckTextGroupView">
+        <attr name="textSize" format="dimension|reference"/>
+        <attr name="textPadding" format="dimension|reference"/>
+        <attr name="textPaddingLeft" format="dimension|reference"/>
+        <attr name="textPaddingTop" format="dimension|reference"/>
+        <attr name="textPaddingRight" format="dimension|reference"/>
+        <attr name="textPaddingButtom" format="dimension|reference"/>
+        <attr name="textGapWidth" format="dimension|reference"/>
+        <attr name="lineHeight" format="dimension|reference"/>
+        <attr name="checkedTextColor" format="color|reference"/>
+        <attr name="unCheckedTextColor" format="color|reference"/>
+        <attr name="checkedStrokeColor" format="color|reference"/>
+        <attr name="unCheckedStrokeColor" format="color|reference"/>
+        <attr name="strokeWidth" format="dimension|reference" />
+        <attr name="checkedDrawable" format="reference|color"/>
+        <attr name="unCheckedDrawable" format="reference|color"/>
+        <attr name="drawTextGapWidth" format="reference|dimension"/>
+        <attr name="drawableHeight" format="dimension|reference"/>
+        <attr name="drawableWidth" format="dimension|reference"/>
+        <attr name="tagRadius" format="reference|dimension"/>
+        <attr name="checkModel">
+            <enum name="SIMPLE" value="6"/>
+            <enum name="MULTI" value="7"/>
+        </attr>
+        <attr name="strokeModel">
+            <!--默认和选中都显示边框-->
+            <enum name="STROKE" value="1"/>
+            <!--默认隐藏边框,选中显示边框-->
+            <enum name="GONE_STROKE" value="2"/>
+            <!--默认显示边框,选中显示填充和边框-->
+            <enum name="STROKE_FILL" value="3"/>
+            <!--默认和选中都显示填充和边框-->
+            <enum name="FILL_FILL" value="4"/>
+            <!--默认和选中都隐藏边框-->
+            <enum name="GONE" value="5"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="star">
+        //星星数量
+        <attr format="integer" name="starsNum"></attr>
+        //星星宽度
+        <attr format="dimension" name="starWidth"></attr>
+        //星星高度
+        <attr format="dimension" name="starHeight"></attr>
+        //星星间距
+        <attr format="dimension" name="starDistance"></attr>
+        //星星背景
+        <attr format="reference" name="starBackground"></attr>
+        //星星变化背景
+        <attr format="reference" name="starDrawBackground"></attr>
+        //控件是否可以点击
+        <attr format="boolean" name="starClickable"></attr>
+
+    </declare-styleable>
+</resources>

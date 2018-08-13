@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhoushicheng.myapplication.SharedElementSample.fragment.DetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/detail_image" />
+
+    <TextView
+        android:id="@+id/detail_body"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/detail_head" />
+
+</RelativeLayout>

@@ -15,7 +15,6 @@ public class UploadImgService extends IntentService {
         intent.setAction(ACTION_UPLOAD_IMG);
         intent.putExtra(EXTRA_IMG_PATH, path);
         context.startService(intent);
-
     }
 
     public UploadImgService() {
@@ -25,7 +24,7 @@ public class UploadImgService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        Log.e("zzz", "onHandleIntent");
+        Log.e("zzz", "onHandleIntent" + " Thread : " + Thread.currentThread().getName() + " id : " + Thread.currentThread().getId());
 
         if (intent != null) {
             final String action = intent.getAction();

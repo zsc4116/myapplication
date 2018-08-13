@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,6 +30,8 @@ public class IntentServiceActivity extends AppCompatActivity {
     };
 
     private void handleResult(String path) {
+        Log.e("zzz", "handleResult" + " Thread : " + Thread.currentThread().getName() + " id : " + Thread.currentThread().getId());
+
         TextView tv = (TextView) mLyTaskContainer.findViewWithTag(path);
         tv.setText(path + " upload success");
     }
@@ -48,6 +51,7 @@ public class IntentServiceActivity extends AppCompatActivity {
         filter.addAction(UPLOAD_RESULT);
         registerReceiver(uploadImgReceiver, filter);
     }
+
 
     int i = 0;
 

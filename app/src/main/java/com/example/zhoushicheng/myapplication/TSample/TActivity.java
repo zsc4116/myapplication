@@ -7,6 +7,7 @@ import com.example.zhoushicheng.myapplication.R;
 
 public class TActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,3 +16,5 @@ public class TActivity extends AppCompatActivity {
 
     }
 }
+
+

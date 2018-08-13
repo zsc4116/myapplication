@@ -2,17 +2,34 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zhoushicheng.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <meta-data
+            android:name="com.example.zhoushicheng.myapplication.EventBusSample.MyGlideModule"
+            android:value="GlideModule" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +55,82 @@
 
         <activity android:name=".HandlerImageloaderSample.HandlerImageloaderActivity" />
         <activity android:name=".ViewDragHelperSample.ViewDragHelperActivity" />
-        <activity android:name=".ViewDragHelperSample.DrawerLayoutActivity"></activity>
+        <activity android:name=".ViewDragHelperSample.DrawerLayoutActivity" />
+        <activity android:name=".AdapterViewTypeTestSample.AdapterViewTypeTestActivity" />
+        <activity android:name=".ZxingSample.ZxingSampleActivity" />
+        <activity android:name=".ZxingSample.zxing.app.CaptureActivity" />
+        <activity android:name=".VideoPlaySample.VideoPlayActivity" />
+        <activity android:name=".EventBusSample.EventBusSampleActivity" />
+        <activity android:name=".LayoutInflaterSetFactorySample.LayoutInflaterSetFactoryActivity" />
+        <activity
+            android:name=".GlideSample.GlideSampleActivity"
+            android:label="@string/title_activity_glide_sample"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".RetrofitAndRxJavaSample.RetrofitAndRxJavaActivity" />
+        <activity android:name=".IntDefAndStringDefAnnotationSample.IntDefAndStringDefAnnotationActivity" />
+        <activity
+            android:name=".CoordinatorLayoutSample.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".CoordinatorLayoutSample.ColActivity" />
+        <activity android:name=".SharedElementSample.SharedElementActivity" />
+        <activity android:name=".RedSpotSample.RedSpotActivity" />
+        <activity android:name=".RedSpotSample.RedSpotSecondActivity" />
+        <activity android:name=".ActivityLifecycleCallbacksSample.ActivityLifecycleCallbacksActivity" />
+        <activity android:name=".GongAndVisibleAnimSample.GongAndVisibleActivity" />
+        <activity android:name=".FragmentSample.FragmentActivity" />
+        <activity android:name=".TagGroupSample.TagGroupSampleActivity" />
+        <activity android:name=".BannerSample.ConvenientBannerSampleActivity" />
+        <activity android:name=".BannerSample.MZBannerViewSampleActivity" />
+        <activity android:name=".CoordinatorLayoutSample.AntHomeFragmentCoordinatorSampleActivity" />
+        <activity android:name=".BaseRecyclerViewAdapterHelperSample.BaseRecyclerViewAdapterHelperSampleActivity" />
+        <activity android:name=".ExpandSample.ViewExpandActivity" />
+        <activity android:name=".CoordinatorLayoutSample.TwiceRecyclerViewScrollSampleActivity" />
+        <activity android:name=".ViewPagerFragmentColSample.ViewPagerFragmentCoordinatorLayoutActivity" />
+        <activity android:name=".ExpandableListViewSample.ExpandableListViewActivity" />
+        <activity android:name=".StarLayoutSample.StarLayoutSampleActivity" />
+        <activity android:name=".AutoPhotoLayoutSample.AutoPhotoLayoutSampleActivity" />
+        <activity android:name=".PasswordEditTextSample.PasswordEditEtextSampleActivity" />
+        <activity android:name=".IndicatorSample.IndicatorSampleActivity" />
+        <activity android:name=".MVPSample.MVPSampleActivity" />
+        <activity android:name=".CoordinatorLayoutSample.TablayoutCoordinatorActivity" />
+        <activity android:name=".CustomDialogSample.CustomDialogSampleActivity" />
+        <activity android:name=".PasswordLayoutSample.PasswordActivity" />
+        <activity android:name=".XRecyclerViewSample.XRecyclerViewSampleActivity" />
+        <activity android:name=".TextMixImageSample.TextMixImageActivity" />
+        <activity android:name=".LocationSample.LocationSampleActivity" />
+
+        <service
+            android:name=".LocationSample.GPSService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ImageUploadAnnotationSample.ImageUploadAnnotationActivity" />
+        <activity android:name=".ScannerSample.ScannerActivity" />
+        <activity android:name=".ScannerSample.ScannerSampleActivity" />
+        <activity android:name=".StarRatingSample.RatingStarActivity" />
+        <activity android:name=".RecyclerViewChangeSequenceSample.RecyclerViewChangeSequenceActivity" />
+        <activity android:name=".CodeAutoCreateSample.CodeAutoCreateActivity" />
+        <activity android:name=".ActivityInteractFragmentHelperSample.RestaurantActivity" />
+        <activity android:name=".ThreadPoolSample.ThreadPoolSampleActivity" />
+        <activity android:name=".DispatchTouchEventSample.DispatchTouchEventSampleActivity" />
+        <activity
+            android:name=".PaypalSample.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SnapHelperSample.SnapHelperActivity"
+            android:label="@string/title_activity_snap_helper"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".BehaviorWithCoordinatorLayoutSample.BehaviorWithCoordinatorLayoutSampleActivity"></activity>
     </application>
 
 </manifest>

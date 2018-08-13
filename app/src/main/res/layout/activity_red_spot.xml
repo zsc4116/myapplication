@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zhoushicheng.myapplication.RedSpotSample.RedSpotActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Title"
+            android:textSize="35sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/aa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_red_spot"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:src="@mipmap/fishs" />
+
+            <ImageView
+                android:id="@+id/iv_red_spot"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="2dp"
+                android:src="@mipmap/pl_red"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_control_red_spot"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="control spot" />
+
+        <Button
+            android:id="@+id/btn_go_to_next"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="next" />
+
+    </LinearLayout>
+
+</LinearLayout>
